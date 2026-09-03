@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "test": "node test.mjs",
-    "measure": "node measure.mjs"
+    "measure": "node measure.mjs",
+    "dev": "node dev.mjs"
   }
 }
