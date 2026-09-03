@@ -61,6 +61,9 @@ $('runBtn').onclick = async () => {
   $('modelChip').textContent = 'model: ' + model;
   state.verified = verifyDraft(draft, CORPUS, rfp);
   state.resolved = new Set();
+  // A new draft is a new release decision. Never inherit a signature from the previous one.
+  $('sign1').checked = $('sign2').checked = false;
+  $('approveBtn').textContent = 'Release to client';
   state.section = 0; state.claim = null;
   tabs[1].disabled = tabs[2].disabled = false;
   renderWorkspace();
