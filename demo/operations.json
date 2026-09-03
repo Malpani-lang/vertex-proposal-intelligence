@@ -1,0 +1,146 @@
+{
+ "sections": [
+  {
+   "heading": "Our Understanding",
+   "claims": [
+    {
+     "text": "Calverton Industries requires an operations review across nine operating units to reduce indirect operating cost.",
+     "sourceIds": [],
+     "type": "brief"
+    },
+    {
+     "text": "The review must baseline indirect cost across all operating units, identify and size improvement opportunities, and mobilise local delivery teams quickly across markets.",
+     "sourceIds": [],
+     "type": "brief"
+    }
+   ]
+  },
+  {
+   "heading": "Proposed Approach",
+   "claims": [
+    {
+     "text": "We will apply VCG’s four‑phase delivery methodology – Diagnose, Design, Deliver, Sustain – to structure the operations review.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "A joint steering committee will be convened and will meet fortnightly to govern the engagement.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "An Engagement Quality Director, independent of the delivery team, will be assigned to oversee quality for the duration of the project.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "Knowledge‑transfer workshops will be conducted in the final four weeks to embed findings with local teams.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "Leveraging VCG’s presence in 12 markets, we can mobilise local delivery teams within 10 business days of contract signature.",
+     "sourceIds": [
+      "P-2023-044"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "Our approach will include a baseline assessment of indirect costs across all nine operating units to establish a common cost reference.",
+     "sourceIds": [],
+     "type": "brief"
+    }
+   ]
+  },
+  {
+   "heading": "Relevant Experience",
+   "claims": [
+    {
+     "text": "In 2023, VCG delivered a global operations review for Halden Group covering nine operating units and achieved a 12 percent reduction in indirect operating cost over ten months.",
+     "sourceIds": [
+      "P-2023-044"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "The Halden engagement was mobilised within 10 business days, demonstrating our ability to deploy local delivery teams rapidly across markets.",
+     "sourceIds": [
+      "P-2023-044"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "VCG operates in 12 markets and has a delivery footprint of 2,000 consultants across six practices, enabling scalable support for multi‑unit reviews.",
+     "sourceIds": [
+      "C-001"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "Our average engagement team size of seven consultants and a repeat‑engagement rate of 68 percent reflect our capacity to build trusted, effective teams.",
+     "sourceIds": [
+      "C-001"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "We redesigned Larkfield Group’s operating model across five business units, removing three management layers and cutting decision‑cycle time by 31 percent.",
+     "sourceIds": [
+      "P-2024-031"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "For Meridian Industrial, VCG reduced outbound logistics cost by 14 percent and inventory carrying cost by 9 percent using our Network Optimiser toolkit.",
+     "sourceIds": [
+      "P-2024-017"
+     ],
+     "type": "fact"
+    }
+   ]
+  },
+  {
+   "heading": "Why VCG",
+   "claims": [
+    {
+     "text": "Our proven four‑phase methodology, combined with rapid mobilisation capability, positions VCG to deliver the required cost‑reduction outcomes on the Calverton timeline.",
+     "sourceIds": [
+      "C-002",
+      "P-2023-044"
+     ],
+     "type": "judgment"
+    },
+    {
+     "text": "The high repeat‑engagement rate (68 percent) indicates strong client satisfaction and long‑term partnership potential.",
+     "sourceIds": [
+      "C-001"
+     ],
+     "type": "judgment"
+    },
+    {
+     "text": "Our experience delivering a 12 percent indirect cost reduction across nine units directly aligns with Calverton’s objective to lower indirect operating costs.",
+     "sourceIds": [
+      "P-2023-044"
+     ],
+     "type": "judgment"
+    },
+    {
+     "text": "The dedicated Engagement Quality Director and fortnightly steering committee ensure rigorous governance and quality assurance throughout the project.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "judgment"
+    }
+   ]
+  }
+ ],
+ "model": "openai/gpt-oss-120b (Groq)"
+}

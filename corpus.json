@@ -1,0 +1,287 @@
+{
+  "eligibilityLegend": {
+    "approved": "Client-referenceable. May be used in client-facing draft text.",
+    "internal": "Internal use only. Informs reasoning and commercials; never quoted to a client.",
+    "restricted": "Client-confidential. Excluded from retrieval entirely."
+  },
+  "authorityLegend": {
+    "1": "Credentials library (highest authority)",
+    "2": "Past proposal / case study",
+    "3": "Internal reference note"
+  },
+  "sources": [
+    {
+      "id": "C-001",
+      "title": "VCG Firm Credentials 2026",
+      "type": "credentials",
+      "client": "VCG (internal)",
+      "sectors": [
+        "supply-chain",
+        "finance",
+        "risk",
+        "technology",
+        "operations",
+        "strategy"
+      ],
+      "date": "2026-01",
+      "eligibility": "approved",
+      "authority": 1,
+      "text": "Vertex Consulting Group is a mid-sized management consulting firm with 2000 consultants across six practices: Strategy, Operations, Technology, Supply Chain, Finance and Risk Advisory. VCG operates across 12 markets. The average engagement team size is 7 consultants. VCG has delivered 340 engagements since 2020, with a client repeat-engagement rate of 68 percent.",
+      "firmFacts": {
+        "markets": "12",
+        "consultants": "2000",
+        "engagements": "340",
+        "practices": "6"
+      }
+    },
+    {
+      "id": "C-002",
+      "title": "VCG Delivery Methodology Overview",
+      "type": "credentials",
+      "client": "VCG (internal)",
+      "sectors": [
+        "supply-chain",
+        "finance",
+        "risk",
+        "technology",
+        "operations",
+        "strategy"
+      ],
+      "date": "2025-09",
+      "eligibility": "approved",
+      "authority": 1,
+      "text": "VCG follows a four-phase delivery methodology: Diagnose, Design, Deliver, Sustain. Every engagement is governed by a joint steering committee that meets fortnightly. VCG assigns a dedicated Engagement Quality Director, independent of the delivery team, to every engagement running longer than 6 months. Knowledge transfer workshops are run in the final 4 weeks of every engagement."
+    },
+    {
+      "id": "P-2023-044",
+      "title": "Proposal - Global Operations Review, Halden Group",
+      "type": "past_proposal",
+      "client": "Halden Group",
+      "sectors": [
+        "operations",
+        "supply-chain",
+        "strategy"
+      ],
+      "date": "2023-06",
+      "eligibility": "approved",
+      "authority": 2,
+      "text": "Leveraging our presence in 14 markets, VCG can mobilise local delivery teams within 10 business days of contract signature. The Halden engagement covered 9 operating units and delivered a 12 percent reduction in indirect operating cost over 10 months."
+    },
+    {
+      "id": "P-2024-017",
+      "title": "Proposal - Distribution Network Redesign, Meridian Industrial",
+      "type": "past_proposal",
+      "client": "Meridian Industrial",
+      "sectors": [
+        "supply-chain",
+        "operations"
+      ],
+      "date": "2024-11",
+      "eligibility": "approved",
+      "authority": 2,
+      "text": "VCG redesigned Meridian Industrial's distribution network across 4 regional distribution centres, reducing outbound logistics cost by 14 percent within 11 months. The engagement deployed a 6 person team over 9 months and applied VCG's Network Optimiser toolkit to model 27 scenarios against service-level and cost constraints. Inventory carrying cost fell 9 percent in the same period."
+    },
+    {
+      "id": "CS-003",
+      "title": "Case Study - Supplier Risk Segmentation, Arclight Manufacturing",
+      "type": "case_study",
+      "client": "Arclight Manufacturing",
+      "sectors": [
+        "supply-chain",
+        "risk"
+      ],
+      "date": "2025-03",
+      "eligibility": "approved",
+      "authority": 2,
+      "text": "VCG segmented 1180 suppliers into four risk tiers using spend concentration, geographic exposure and financial-health signals. Single-source dependency was reduced from 23 percent to 9 percent of addressable spend over 14 months. A supplier early-warning dashboard was handed over to the client's procurement team at close."
+    },
+    {
+      "id": "I-004",
+      "title": "Internal - Supply Chain Practice Capability Note",
+      "type": "internal_reference",
+      "client": "VCG (internal)",
+      "sectors": [
+        "supply-chain"
+      ],
+      "date": "2026-02",
+      "eligibility": "internal",
+      "authority": 3,
+      "text": "The Supply Chain practice has 310 consultants. Deep bench strength in demand planning, network design and S&OP. Thin bench in customs and trade-compliance work - flag to the practice lead before committing to trade-heavy scopes. Two senior network-design leads are committed until Q3."
+    },
+    {
+      "id": "X-009",
+      "title": "Proposal - Procurement Transformation, client withheld",
+      "type": "past_proposal",
+      "client": "CONFIDENTIAL",
+      "sectors": [
+        "supply-chain"
+      ],
+      "date": "2025-07",
+      "eligibility": "restricted",
+      "authority": 2,
+      "text": "Client has not granted reference rights. Content withheld from retrieval."
+    },
+    {
+      "id": "P-2024-052",
+      "title": "Proposal - Finance Function Transformation, Calder Foods",
+      "type": "past_proposal",
+      "client": "Calder Foods",
+      "sectors": [
+        "finance"
+      ],
+      "date": "2024-08",
+      "eligibility": "approved",
+      "authority": 2,
+      "text": "VCG reduced Calder Foods' month-end close from 12 days to 6 days and standardised 41 reporting templates across 3 legal entities. The 8 month engagement introduced a controls-first close calendar and retrained 55 finance staff on the new process."
+    },
+    {
+      "id": "CS-007",
+      "title": "Case Study - Working Capital Release, Voss Retail",
+      "type": "case_study",
+      "client": "Voss Retail",
+      "sectors": [
+        "finance",
+        "supply-chain"
+      ],
+      "date": "2025-01",
+      "eligibility": "approved",
+      "authority": 2,
+      "text": "VCG released 180 Cr of working capital for Voss Retail over 12 months through a coordinated DPO and DSO reset alongside an inventory policy redesign covering 6 categories. Payment terms were renegotiated with 140 suppliers."
+    },
+    {
+      "id": "X-012",
+      "title": "Proposal - Treasury Restructuring, client withheld",
+      "type": "past_proposal",
+      "client": "CONFIDENTIAL",
+      "sectors": [
+        "finance"
+      ],
+      "date": "2025-11",
+      "eligibility": "restricted",
+      "authority": 2,
+      "text": "Client has not granted reference rights. Content withheld from retrieval."
+    },
+    {
+      "id": "P-2023-088",
+      "title": "Proposal - Enterprise Risk Framework, Northbank Financial",
+      "type": "past_proposal",
+      "client": "Northbank Financial",
+      "sectors": [
+        "risk",
+        "finance"
+      ],
+      "date": "2023-10",
+      "eligibility": "approved",
+      "authority": 2,
+      "text": "VCG built a three-lines-of-defence operating model for Northbank Financial, rationalising 62 controls to 38 without loss of coverage. Outstanding regulatory findings were closed within 2 review cycles. The engagement ran 7 months with a 5 person team."
+    },
+    {
+      "id": "I-011",
+      "title": "Internal - Risk Advisory Delivery Note",
+      "type": "internal_reference",
+      "client": "VCG (internal)",
+      "sectors": [
+        "risk"
+      ],
+      "date": "2026-01",
+      "eligibility": "internal",
+      "authority": 3,
+      "text": "Risk Advisory practice has 240 consultants. Regulatory remediation work is priced on a fixed-fee basis. Avoid time-and-materials commitments where a regulator-driven deadline is in scope. Escalate any scope touching sanctions screening to the practice lead."
+    },
+    {
+      "id": "P-2025-003",
+      "title": "Proposal - Application Rationalisation, Kestrel Logistics",
+      "type": "past_proposal",
+      "client": "Kestrel Logistics",
+      "sectors": [
+        "technology",
+        "supply-chain"
+      ],
+      "date": "2025-04",
+      "eligibility": "approved",
+      "authority": 2,
+      "text": "VCG rationalised Kestrel Logistics' application estate from 214 applications to 96, reducing annual run cost by 19 percent over 18 months. A target architecture and a 3 wave decommissioning plan were delivered in the first 10 weeks."
+    },
+    {
+      "id": "CS-014",
+      "title": "Case Study - Cloud Migration, Denhoff Media",
+      "type": "case_study",
+      "client": "Denhoff Media",
+      "sectors": [
+        "technology"
+      ],
+      "date": "2024-12",
+      "eligibility": "approved",
+      "authority": 2,
+      "text": "VCG migrated 68 workloads to public cloud for Denhoff Media across 7 months with zero unplanned downtime. Infrastructure cost fell 22 percent against the pre-migration baseline and deployment frequency rose from monthly to weekly."
+    },
+    {
+      "id": "X-021",
+      "title": "Proposal - Core Platform Replacement, client withheld",
+      "type": "past_proposal",
+      "client": "CONFIDENTIAL",
+      "sectors": [
+        "technology"
+      ],
+      "date": "2026-02",
+      "eligibility": "restricted",
+      "authority": 2,
+      "text": "Client has not granted reference rights. Content withheld from retrieval."
+    },
+    {
+      "id": "P-2024-031",
+      "title": "Proposal - Operating Model Redesign, Larkfield Group",
+      "type": "past_proposal",
+      "client": "Larkfield Group",
+      "sectors": [
+        "strategy",
+        "operations"
+      ],
+      "date": "2024-05",
+      "eligibility": "approved",
+      "authority": 2,
+      "text": "VCG redesigned Larkfield Group's operating model across 5 business units, removing 3 management layers and cutting decision cycle time by 31 percent. The engagement ran 6 months and included a 90 day transition support period."
+    },
+    {
+      "id": "RC-001",
+      "title": "VCG Approved Rate Card FY26",
+      "type": "rate_card",
+      "client": "VCG (internal)",
+      "sectors": [
+        "supply-chain",
+        "finance",
+        "risk",
+        "technology",
+        "operations",
+        "strategy"
+      ],
+      "date": "2026-04",
+      "eligibility": "internal",
+      "authority": 1,
+      "text": "Approved FY26 day rates: Partner 145000. Director 98000. Manager 62000. Consultant 38000. Analyst 24000. Rates are exclusive of taxes and expenses. Discounts beyond 10 percent require Partner and Commercial Director sign-off.",
+      "rates": [
+        {
+          "grade": "Partner",
+          "dayRate": 145000
+        },
+        {
+          "grade": "Director",
+          "dayRate": 98000
+        },
+        {
+          "grade": "Manager",
+          "dayRate": 62000
+        },
+        {
+          "grade": "Consultant",
+          "dayRate": 38000
+        },
+        {
+          "grade": "Analyst",
+          "dayRate": 24000
+        }
+      ]
+    }
+  ],
+  "firmFactsNote": "Facts of record about VCG itself. A claim that contradicts these is a conflict regardless of what the model cited - the system never silently picks a side."
+}

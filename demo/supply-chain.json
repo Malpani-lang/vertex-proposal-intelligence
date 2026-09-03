@@ -1,0 +1,219 @@
+{
+ "sections": [
+  {
+   "heading": "Our Understanding",
+   "claims": [
+    {
+     "text": "Northwind Components is a mid-market industrial manufacturer seeking a consulting partner to review and redesign its distribution network across four regional markets.",
+     "sourceIds": [],
+     "type": "brief"
+    },
+    {
+     "text": "The scope includes assessing the current distribution centre footprint and outbound logistics cost base.",
+     "sourceIds": [],
+     "type": "brief"
+    },
+    {
+     "text": "The scope includes modeling alternative network configurations against service-level and cost constraints.",
+     "sourceIds": [],
+     "type": "brief"
+    },
+    {
+     "text": "The scope includes segmenting the supplier base by risk and reducing single-source dependency.",
+     "sourceIds": [],
+     "type": "brief"
+    },
+    {
+     "text": "The scope includes delivering an implementation roadmap with a clear inventory policy.",
+     "sourceIds": [],
+     "type": "brief"
+    },
+    {
+     "text": "Respondents are asked to evidence comparable network redesign work, describe delivery methodology and team model, and state the firm's geographic delivery footprint.",
+     "sourceIds": [],
+     "type": "brief"
+    }
+   ]
+  },
+  {
+   "heading": "Proposed Approach",
+   "claims": [
+    {
+     "text": "VCG follows a four-phase delivery methodology: Diagnose, Design, Deliver, Sustain.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "A joint steering committee governs every engagement and meets fortnightly.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "For engagements longer than six months VCG assigns a dedicated Engagement Quality Director independent of the delivery team.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "Knowledge-transfer workshops are conducted in the final four weeks of each engagement.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "Leveraging VCG’s presence in 14 markets, local delivery teams can be mobilised within ten business days of contract signature.",
+     "sourceIds": [
+      "P-2023-044"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "The project will apply VCG’s Network Optimiser toolkit to model multiple network scenarios against service-level and cost constraints.",
+     "sourceIds": [
+      "P-2024-017"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "We will evaluate at least 20 alternative distribution network configurations to identify the optimal footprint and logistics cost structure.",
+     "sourceIds": [],
+     "type": "judgment"
+    },
+    {
+     "text": "VCG segments suppliers using spend concentration, geographic exposure and financial-health signals.",
+     "sourceIds": [
+      "CS-003"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "The final deliverable will include an implementation roadmap and a clear inventory policy aligned with the redesigned network.",
+     "sourceIds": [],
+     "type": "judgment"
+    }
+   ]
+  },
+  {
+   "heading": "Relevant Experience",
+   "claims": [
+    {
+     "text": "VCG redesigned Meridian Industrial’s distribution network across four regional distribution centres, reducing outbound logistics cost by 14 percent within 11 months.",
+     "sourceIds": [
+      "P-2024-017"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "The Meridian engagement deployed a six-person team over nine months and used the Network Optimiser toolkit to model 27 scenarios against service-level and cost constraints.",
+     "sourceIds": [
+      "P-2024-017"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "Inventory carrying cost fell 9 percent during the same period for Meridian Industrial.",
+     "sourceIds": [
+      "P-2024-017"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "VCG segmented 1,180 suppliers for Arclight Manufacturing into four risk tiers using spend concentration, geographic exposure and financial-health signals.",
+     "sourceIds": [
+      "CS-003"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "Single-source dependency for Arclight was reduced from 23 percent to 9 percent of addressable spend over 14 months.",
+     "sourceIds": [
+      "CS-003"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "A supplier early-warning dashboard was handed over to the client’s procurement team at close of the Arclight engagement.",
+     "sourceIds": [
+      "CS-003"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "VCG operates across 12 markets.",
+     "sourceIds": [
+      "C-001"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "VCG has delivered 340 engagements since 2020 with an average team size of seven consultants.",
+     "sourceIds": [
+      "C-001"
+     ],
+     "type": "fact"
+    }
+   ]
+  },
+  {
+   "heading": "Why VCG",
+   "claims": [
+    {
+     "text": "VCG’s repeat-engagement rate of 68 percent demonstrates strong client satisfaction and long-term partnership capability.",
+     "sourceIds": [
+      "C-001"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "The four-phase methodology, dedicated quality oversight, and knowledge-transfer workshops ensure rigorous delivery and sustainable outcomes.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "judgment"
+    },
+    {
+     "text": "Proven network redesign results, such as a 14 percent logistics cost reduction for Meridian, illustrate VCG’s capability to deliver measurable savings.",
+     "sourceIds": [
+      "P-2024-017"
+     ],
+     "type": "judgment"
+    },
+    {
+     "text": "Supplier risk segmentation experience, reducing single-source dependency from 23 percent to 9 percent, shows VCG can address the RFP’s supplier-risk objective.",
+     "sourceIds": [
+      "CS-003"
+     ],
+     "type": "judgment"
+    },
+    {
+     "text": "Rapid mobilization of local teams within ten business days enables VCG to start the Northwind project quickly across its four regional markets.",
+     "sourceIds": [
+      "P-2023-044"
+     ],
+     "type": "judgment"
+    },
+    {
+     "text": "VCG’s average engagement team size is seven consultants.",
+     "sourceIds": [
+      "C-001"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "VCG successfully deployed a six-person team for a network redesign engagement.",
+     "sourceIds": [
+      "P-2024-017"
+     ],
+     "type": "fact"
+    }
+   ]
+  }
+ ],
+ "model": "openai/gpt-oss-120b (Groq)"
+}

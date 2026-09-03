@@ -1,0 +1,9 @@
+{
+  "name": "vertex-proposal-intelligence",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node test.mjs",
+    "measure": "node measure.mjs"
+  }
+}

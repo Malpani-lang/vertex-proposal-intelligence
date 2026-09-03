@@ -1,0 +1,131 @@
+{
+ "sections": [
+  {
+   "heading": "Our Understanding",
+   "claims": [
+    {
+     "text": "Ridgemont Holdings wants support to redesign its operating model across five business units to speed up decision‑making.",
+     "sourceIds": [],
+     "type": "brief"
+    },
+    {
+     "text": "The work includes diagnosing decision bottlenecks and management layering, redesigning the operating model and governance, and providing transition support after go‑live.",
+     "sourceIds": [],
+     "type": "brief"
+    }
+   ]
+  },
+  {
+   "heading": "Proposed Approach",
+   "claims": [
+    {
+     "text": "VCG will apply its four‑phase delivery methodology – Diagnose, Design, Deliver, Sustain – to structure the engagement.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "A joint steering committee will be convened and will meet fortnightly to oversee progress.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "For engagements longer than six months, a dedicated Engagement Quality Director independent of the delivery team will be assigned.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "Knowledge‑transfer workshops will be run in the final four weeks to ensure a smooth transition after go‑live.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    }
+   ]
+  },
+  {
+   "heading": "Relevant Experience",
+   "claims": [
+    {
+     "text": "VCG redesigned Larkfield Group’s operating model across five business units, removed three management layers and cut decision‑cycle time by 31 percent.",
+     "sourceIds": [
+      "P-2024-031"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "The Larkfield engagement was delivered in six months and included a 90‑day transition‑support period.",
+     "sourceIds": [
+      "P-2024-031"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "VCG’s Global Operations Review for Halden Group covered nine operating units and achieved a 12 percent reduction in indirect operating cost over ten months.",
+     "sourceIds": [
+      "P-2023-044"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "VCG can mobilise local delivery teams within ten business days of contract signature, leveraging presence in 14 markets.",
+     "sourceIds": [
+      "P-2023-044"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "VCG employs 2,000 consultants across six practices and has delivered 340 engagements since 2020, with a client repeat‑engagement rate of 68 percent.",
+     "sourceIds": [
+      "C-001"
+     ],
+     "type": "fact"
+    }
+   ]
+  },
+  {
+   "heading": "Why VCG",
+   "claims": [
+    {
+     "text": "VCG has demonstrated the ability to redesign operating models across multiple business units and deliver measurable speed‑to‑decision improvements.",
+     "sourceIds": [
+      "P-2024-031"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "The firm can mobilise delivery resources quickly, typically within ten business days, ensuring rapid project start‑up.",
+     "sourceIds": [
+      "P-2023-044"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "A dedicated Engagement Quality Director and fortnightly steering committee provide rigorous governance and quality assurance throughout the project.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "VCG’s high repeat‑engagement rate (68 percent) reflects strong client satisfaction and long‑term partnership capability.",
+     "sourceIds": [
+      "C-001"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "The combination of proven operating‑model outcomes, rapid mobilisation, and structured governance positions VCG to meet Ridgemont’s objectives efficiently.",
+     "sourceIds": [],
+     "type": "judgment"
+    }
+   ]
+  }
+ ],
+ "model": "openai/gpt-oss-120b (Groq)"
+}

@@ -1,0 +1,140 @@
+{
+ "sections": [
+  {
+   "heading": "Our Understanding",
+   "claims": [
+    {
+     "text": "Brindle Group seeks a partner to rationalise a sprawling application estate and migrate priority workloads to cloud.",
+     "sourceIds": [],
+     "type": "brief"
+    },
+    {
+     "text": "The scope includes baselining the application estate, defining a target architecture, building a wave‑based decommissioning plan, migrating priority workloads with no unplanned downtime, and reducing annual run cost.",
+     "sourceIds": [],
+     "type": "brief"
+    }
+   ]
+  },
+  {
+   "heading": "Proposed Approach",
+   "claims": [
+    {
+     "text": "We will begin with a Diagnose phase to baseline the application estate and define a target architecture.",
+     "sourceIds": [
+      "C-002",
+      "P-2025-003"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "In the Design phase we will develop a wave‑based decommissioning plan that aligns with business priorities.",
+     "sourceIds": [
+      "P-2025-003"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "The Deliver phase will execute the migration of priority workloads to the public cloud using a zero‑unplanned‑downtime approach proven in prior work.",
+     "sourceIds": [
+      "CS-014"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "Throughout the engagement we will apply VCG’s four‑phase methodology, governed by a joint steering committee that meets fortnightly and overseen by an Engagement Quality Director for engagements longer than six months.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "Knowledge transfer workshops will be run in the final four weeks to ensure client teams can sustain the new environment.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "Success will be measured against the RFP goals of reduced annual run cost, stable migration, and a clear decommission schedule.",
+     "sourceIds": [],
+     "type": "judgment"
+    }
+   ]
+  },
+  {
+   "heading": "Relevant Experience",
+   "claims": [
+    {
+     "text": "VCG rationalised Kestrel Logistics’ application estate from 214 applications to 96, delivering a target architecture and a three‑wave decommissioning plan within the first 10 weeks.",
+     "sourceIds": [
+      "P-2025-003"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "The Kestrel engagement reduced annual run cost by 19 percent over 18 months.",
+     "sourceIds": [
+      "P-2025-003"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "VCG migrated 68 workloads to a public cloud for Denhoff Media over seven months with zero unplanned downtime.",
+     "sourceIds": [
+      "CS-014"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "The Denhoff migration lowered infrastructure cost by 22 percent and increased deployment frequency from monthly to weekly.",
+     "sourceIds": [
+      "CS-014"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "VCG has delivered 340 engagements since 2020 with a client repeat‑engagement rate of 68 percent, demonstrating trusted relationships.",
+     "sourceIds": [
+      "C-001"
+     ],
+     "type": "fact"
+    }
+   ]
+  },
+  {
+   "heading": "Why VCG",
+   "claims": [
+    {
+     "text": "Our proven rationalisation and migration outcomes align directly with the client’s objectives of cost reduction and uninterrupted migration.",
+     "sourceIds": [
+      "P-2025-003",
+      "CS-014"
+     ],
+     "type": "judgment"
+    },
+    {
+     "text": "The four‑phase delivery methodology ensures disciplined execution, governance, and knowledge transfer, reducing risk for complex estate transformations.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "judgment"
+    },
+    {
+     "text": "With 2,000 consultants across six practices and an average team size of seven, VCG can allocate the right mix of strategy and technology expertise to this program.",
+     "sourceIds": [
+      "C-001"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "A repeat‑engagement rate of 68 percent indicates strong client satisfaction and the likelihood of a successful partnership.",
+     "sourceIds": [
+      "C-001"
+     ],
+     "type": "judgment"
+    }
+   ]
+  }
+ ],
+ "model": "openai/gpt-oss-120b (Groq)"
+}

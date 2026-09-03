@@ -1,0 +1,346 @@
+{
+ "totals": {
+  "runs": 12,
+  "claims": 239,
+  "Grounded": 146,
+  "Partial": 2,
+  "Unsupported": 4,
+  "Conflicting": 7,
+  "Judgment": 40,
+  "FromBrief": 40,
+  "exceptions": 13,
+  "runsBlocked": 7
+ },
+ "runs": [
+  {
+   "sector": "supply-chain",
+   "run": 1,
+   "matched": 12,
+   "eligible": 9,
+   "used": 5,
+   "claims": 30,
+   "Grounded": 17,
+   "Partially Grounded": 0,
+   "Unsupported": 0,
+   "Judgment": 6,
+   "Conflicting": 1,
+   "From Brief": 6,
+   "exceptions": 1,
+   "blocked": true,
+   "latencyTokens": 3570
+  },
+  {
+   "sector": "supply-chain",
+   "run": 2,
+   "matched": 12,
+   "eligible": 9,
+   "used": 5,
+   "claims": 26,
+   "Grounded": 14,
+   "Partially Grounded": 0,
+   "Unsupported": 1,
+   "Judgment": 4,
+   "Conflicting": 3,
+   "From Brief": 4,
+   "exceptions": 4,
+   "blocked": true,
+   "latencyTokens": 3813
+  },
+  {
+   "sector": "finance",
+   "run": 1,
+   "matched": 13,
+   "eligible": 9,
+   "used": 5,
+   "claims": 17,
+   "Grounded": 9,
+   "Partially Grounded": 0,
+   "Unsupported": 0,
+   "Judgment": 4,
+   "Conflicting": 0,
+   "From Brief": 4,
+   "exceptions": 0,
+   "blocked": false,
+   "latencyTokens": 2565
+  },
+  {
+   "sector": "finance",
+   "run": 2,
+   "matched": 13,
+   "eligible": 9,
+   "used": 5,
+   "claims": 23,
+   "Grounded": 14,
+   "Partially Grounded": 0,
+   "Unsupported": 0,
+   "Judgment": 5,
+   "Conflicting": 0,
+   "From Brief": 4,
+   "exceptions": 0,
+   "blocked": false,
+   "latencyTokens": 2675
+  },
+  {
+   "sector": "risk",
+   "run": 1,
+   "matched": 10,
+   "eligible": 8,
+   "used": 5,
+   "claims": 17,
+   "Grounded": 13,
+   "Partially Grounded": 0,
+   "Unsupported": 0,
+   "Judgment": 1,
+   "Conflicting": 0,
+   "From Brief": 3,
+   "exceptions": 0,
+   "blocked": false,
+   "latencyTokens": 2911
+  },
+  {
+   "sector": "risk",
+   "run": 2,
+   "matched": 10,
+   "eligible": 8,
+   "used": 5,
+   "claims": 14,
+   "Grounded": 10,
+   "Partially Grounded": 0,
+   "Unsupported": 0,
+   "Judgment": 1,
+   "Conflicting": 0,
+   "From Brief": 3,
+   "exceptions": 0,
+   "blocked": false,
+   "latencyTokens": 2380
+  },
+  {
+   "sector": "technology",
+   "run": 1,
+   "matched": 8,
+   "eligible": 6,
+   "used": 5,
+   "claims": 17,
+   "Grounded": 10,
+   "Partially Grounded": 1,
+   "Unsupported": 0,
+   "Judgment": 4,
+   "Conflicting": 0,
+   "From Brief": 2,
+   "exceptions": 1,
+   "blocked": true,
+   "latencyTokens": 2782
+  },
+  {
+   "sector": "technology",
+   "run": 2,
+   "matched": 8,
+   "eligible": 6,
+   "used": 5,
+   "claims": 18,
+   "Grounded": 10,
+   "Partially Grounded": 0,
+   "Unsupported": 0,
+   "Judgment": 6,
+   "Conflicting": 0,
+   "From Brief": 2,
+   "exceptions": 0,
+   "blocked": false,
+   "latencyTokens": 2856
+  },
+  {
+   "sector": "operations",
+   "run": 1,
+   "matched": 8,
+   "eligible": 7,
+   "used": 5,
+   "claims": 18,
+   "Grounded": 10,
+   "Partially Grounded": 1,
+   "Unsupported": 0,
+   "Judgment": 4,
+   "Conflicting": 0,
+   "From Brief": 3,
+   "exceptions": 1,
+   "blocked": true,
+   "latencyTokens": 2864
+  },
+  {
+   "sector": "operations",
+   "run": 2,
+   "matched": 8,
+   "eligible": 7,
+   "used": 5,
+   "claims": 21,
+   "Grounded": 12,
+   "Partially Grounded": 0,
+   "Unsupported": 0,
+   "Judgment": 4,
+   "Conflicting": 1,
+   "From Brief": 4,
+   "exceptions": 1,
+   "blocked": true,
+   "latencyTokens": 2956
+  },
+  {
+   "sector": "strategy",
+   "run": 1,
+   "matched": 8,
+   "eligible": 7,
+   "used": 5,
+   "claims": 16,
+   "Grounded": 12,
+   "Partially Grounded": 0,
+   "Unsupported": 0,
+   "Judgment": 1,
+   "Conflicting": 1,
+   "From Brief": 2,
+   "exceptions": 1,
+   "blocked": true,
+   "latencyTokens": 2667
+  },
+  {
+   "sector": "strategy",
+   "run": 2,
+   "matched": 8,
+   "eligible": 7,
+   "used": 5,
+   "claims": 22,
+   "Grounded": 15,
+   "Partially Grounded": 0,
+   "Unsupported": 3,
+   "Judgment": 0,
+   "Conflicting": 1,
+   "From Brief": 3,
+   "exceptions": 4,
+   "blocked": true,
+   "latencyTokens": 2979
+  }
+ ],
+ "caught": [
+  {
+   "sector": "supply-chain",
+   "run": 1,
+   "status": "Conflicting",
+   "text": "Leveraging VCG’s presence in 14 markets, local delivery teams can be mobilised within ten business days of contract signature.",
+   "cited": [
+    "P-2023-044"
+   ],
+   "reason": "Conflicts with the firm facts of record: C-001 states 12 markets, this claim states 14. Requires human resolution - the system will not pick one."
+  },
+  {
+   "sector": "supply-chain",
+   "run": 2,
+   "status": "Unsupported",
+   "text": "The final phase will deliver a detailed implementation roadmap that includes a clear inventory policy and change‑management plan.",
+   "cited": [],
+   "reason": "No eligible source was cited for this claim."
+  },
+  {
+   "sector": "supply-chain",
+   "run": 2,
+   "status": "Conflicting",
+   "text": "Leveraging VCG’s presence in 14 markets, local delivery teams can be mobilized within 10 business days of contract signature.",
+   "cited": [
+    "P-2023-044"
+   ],
+   "reason": "Conflicts with the firm facts of record: C-001 states 12 markets, this claim states 14. Requires human resolution - the system will not pick one."
+  },
+  {
+   "sector": "supply-chain",
+   "run": 2,
+   "status": "Conflicting",
+   "text": "In the Halden Group global operations review, VCG leveraged its presence in 14 markets to mobilize local teams within 10 business days and delivered a 12 percent reduction in indirect operating cost over 10 months.",
+   "cited": [
+    "P-2023-044"
+   ],
+   "reason": "Conflicts with the firm facts of record: C-001 states 12 markets, this claim states 14. Requires human resolution - the system will not pick one."
+  },
+  {
+   "sector": "supply-chain",
+   "run": 2,
+   "status": "Conflicting",
+   "text": "With operations in 12 markets and the capability to mobilize teams within 10 business days, VCG can provide the geographic delivery footprint required by the RFP.",
+   "cited": [
+    "C-001",
+    "P-2023-044"
+   ],
+   "reason": "Cited sources disagree on \"markets\": 12 vs 14. Requires human resolution - the system will not pick one."
+  },
+  {
+   "sector": "technology",
+   "run": 1,
+   "status": "Partially Grounded",
+   "text": "In the Design phase we will develop a wave‑based decommissioning plan that aligns with business priorities.",
+   "cited": [
+    "P-2025-003"
+   ],
+   "reason": "Only weakly supported by the cited source. Confirm before sending."
+  },
+  {
+   "sector": "operations",
+   "run": 1,
+   "status": "Partially Grounded",
+   "text": "In 2023, VCG delivered a global operations review for Halden Group covering nine operating units and achieved a 12 percent reduction in indirect operating cost over ten months.",
+   "cited": [
+    "P-2023-044"
+   ],
+   "reason": "Part of this claim is supported; not found in cited sources: 2023 vcg."
+  },
+  {
+   "sector": "operations",
+   "run": 2,
+   "status": "Conflicting",
+   "text": "Leveraging its presence in 12 markets, VCG can mobilise local delivery teams within ten business days of contract signature.",
+   "cited": [
+    "P-2023-044",
+    "C-001"
+   ],
+   "reason": "Cited sources disagree on \"markets\": 14 vs 12. Requires human resolution - the system will not pick one."
+  },
+  {
+   "sector": "strategy",
+   "run": 1,
+   "status": "Conflicting",
+   "text": "VCG can mobilise local delivery teams within ten business days of contract signature, leveraging presence in 14 markets.",
+   "cited": [
+    "P-2023-044"
+   ],
+   "reason": "Conflicts with the firm facts of record: C-001 states 12 markets, this claim states 14. Requires human resolution - the system will not pick one."
+  },
+  {
+   "sector": "strategy",
+   "run": 2,
+   "status": "Unsupported",
+   "text": "During the Diagnose phase VCG will map decision flows and management layers to pinpoint bottlenecks.",
+   "cited": [],
+   "reason": "No eligible source was cited for this claim."
+  },
+  {
+   "sector": "strategy",
+   "run": 2,
+   "status": "Unsupported",
+   "text": "In the Design phase VCG will create a streamlined operating model, removing unnecessary layers and defining new governance structures.",
+   "cited": [],
+   "reason": "No eligible source was cited for this claim."
+  },
+  {
+   "sector": "strategy",
+   "run": 2,
+   "status": "Unsupported",
+   "text": "The Sustain phase will embed continuous‑improvement mechanisms and hand over governance to the client.",
+   "cited": [],
+   "reason": "No eligible source was cited for this claim."
+  },
+  {
+   "sector": "strategy",
+   "run": 2,
+   "status": "Conflicting",
+   "text": "The Halden engagement demonstrated VCG’s ability to mobilise local delivery teams within ten business days across 14 markets.",
+   "cited": [
+    "P-2023-044"
+   ],
+   "reason": "Conflicts with the firm facts of record: C-001 states 12 markets, this claim states 14. Requires human resolution - the system will not pick one."
+  }
+ ]
+}

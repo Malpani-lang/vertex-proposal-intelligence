@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vertex Proposal Intelligence</title>
+<style>
+:root{
+  --ink:#101a2b; --ink-2:#1b2942; --ink-3:#2c3d5c;
+  --paper:#faf7f2; --paper-2:#f2ede4; --line:#ded5c7;
+  --brass:#a8863f; --brass-soft:#c9ab6b;
+  --muted:#6b7280; --text:#1c2331;
+  --ok:#2f6f4e; --warn:#9a6b18; --bad:#a33232; --conflict:#7a4a8c; --judge:#55606f;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  --mono:"SF Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:14px;line-height:1.55}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;margin:0}
+button{font:inherit;cursor:pointer}
+
+header{background:var(--ink);color:var(--paper);padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-size:19px;letter-spacing:.02em}
+.brand b{color:var(--brass-soft);font-weight:600}
+.brand span{opacity:.62;font-size:13px;font-family:var(--sans);margin-left:8px;letter-spacing:.04em;text-transform:uppercase}
+.spacer{flex:1}
+.chip{font-family:var(--mono);font-size:11px;padding:3px 9px;border:1px solid rgba(250,247,242,.28);border-radius:3px;color:rgba(250,247,242,.8)}
+
+nav{display:flex;background:var(--ink-2);padding:0 24px;gap:2px;overflow-x:auto}
+nav button{background:none;border:0;color:rgba(250,247,242,.55);padding:11px 18px;font-size:13px;border-bottom:2px solid transparent;white-space:nowrap}
+nav button .n{font-family:var(--mono);font-size:11px;opacity:.6;margin-right:7px}
+nav button[aria-selected=true]{color:var(--paper);border-bottom-color:var(--brass)}
+nav button:disabled{opacity:.28;cursor:not-allowed}
+
+main{max-width:1400px;margin:0 auto;padding:26px 24px 60px}
+.panel{display:none}.panel.on{display:block}
+
+/* ---- opportunity ---- */
+.intake{max-width:760px}
+.lede{font-family:var(--serif);font-size:22px;line-height:1.35;margin-bottom:6px}
+.sub{color:var(--muted);margin-bottom:24px;max-width:62ch}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:5px}
+input,select,textarea{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:3px;background:#fff;font:inherit;color:var(--text)}
+textarea{min-height:190px;resize:vertical;font-size:13px;line-height:1.6}
+.field{margin-bottom:14px}
+.run{margin-top:8px;background:var(--ink);color:var(--paper);border:0;padding:12px 26px;border-radius:3px;letter-spacing:.03em}
+.run:disabled{opacity:.45;cursor:progress}
+.hint{font-size:12px;color:var(--muted);margin-top:9px}
+
+/* ---- retrieval ledger ---- */
+.ledger{margin-top:26px;border:1px solid var(--line);background:#fff;border-radius:4px;overflow:hidden}
+.ledger h4{padding:11px 16px;background:var(--paper-2);border-bottom:1px solid var(--line);font-size:13px}
+.funnel{display:flex;gap:0;padding:16px;align-items:center;flex-wrap:wrap}
+.fstep{padding:0 22px;border-right:1px solid var(--line)}
+.fstep:last-child{border:0}
+.fstep b{display:block;font-family:var(--serif);font-size:27px;color:var(--ink)}
+.fstep span{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.excl{border-top:1px solid var(--line);padding:12px 16px;font-size:12px}
+.excl div{padding:3px 0;color:var(--muted)}
+.excl code{font-family:var(--mono);color:var(--ink);font-size:11px}
+
+/* ---- workspace ---- */
+.ws{display:grid;grid-template-columns:220px 1fr 340px;gap:0;border:1px solid var(--line);background:#fff;border-radius:4px;min-height:560px}
+.ws>div{padding:16px}
+.ws-nav{background:var(--paper-2);border-right:1px solid var(--line)}
+.ws-ev{border-left:1px solid var(--line);background:var(--paper-2)}
+.ws-hd{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:12px}
+.secitem{padding:8px 10px;border-radius:3px;cursor:pointer;font-size:13px;display:flex;align-items:center;gap:8px}
+.secitem:hover{background:#fff}
+.secitem.cur{background:#fff;box-shadow:inset 2px 0 0 var(--brass)}
+.glyphs{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:1px}
+
+.doc{max-width:68ch;margin:0 auto}
+.doc h2{font-size:20px;margin-bottom:3px}
+.doc .meta{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:20px}
+.doc h3{font-size:15px;margin:22px 0 8px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+.claim{padding:2px 0;cursor:pointer;border-radius:2px}
+.claim:hover{background:var(--paper-2)}
+.claim.cur{background:#fdf6e3}
+.cite{font-family:var(--mono);font-size:10px;padding:1px 5px;margin-left:5px;border-radius:2px;border:1px solid;vertical-align:1px;white-space:nowrap}
+.s-Grounded{color:var(--ok);border-color:#bcd6c6;background:#f0f7f3}
+.s-Judgment{color:var(--judge);border-color:#d3d8de;background:#f4f6f8}
+.s-Partially.Grounded,.s-Partially{color:var(--warn);border-color:#e3d0a6;background:#fdf7e8}
+.s-Unsupported{color:var(--bad);border-color:#e5bebe;background:#fcf1f1}
+.s-Conflicting{color:var(--conflict);border-color:#d8c6e2;background:#f9f3fb}
+.s-From{color:#3d5a80;border-color:#c6d2e2;background:#f2f6fb}
+.claim.flag{box-shadow:inset 0 -2px 0 currentColor;padding:1px 2px}
+
+.evcard{background:#fff;border:1px solid var(--line);border-radius:3px;padding:12px;margin-bottom:10px}
+.evcard .t{font-size:12px;font-weight:600;margin-bottom:2px}
+.evcard .m{font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:8px}
+.evcard blockquote{margin:0;font-size:12px;color:var(--ink-3);border-left:2px solid var(--brass-soft);padding-left:9px;font-family:var(--mono);line-height:1.5}
+.reason{font-size:12px;color:var(--muted);margin:8px 0 14px}
+.empty{color:var(--muted);font-size:12px;font-style:italic}
+
+/* ---- review ---- */
+.rev{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
+.q{border:1px solid var(--line);background:#fff;border-radius:4px}
+.q h4{padding:11px 16px;background:var(--paper-2);border-bottom:1px solid var(--line);font-size:13px;display:flex;align-items:center;gap:10px}
+.item{padding:14px 16px;border-bottom:1px solid var(--line)}
+.item:last-child{border:0}
+.item.done{opacity:.5}
+.item p{margin:6px 0 8px;font-size:13px}
+.acts{display:flex;gap:8px}
+.acts button{font-size:12px;padding:5px 12px;border:1px solid var(--line);background:#fff;border-radius:3px}
+.acts button:hover{border-color:var(--ink-3)}
+.gate{border:1px solid var(--line);background:#fff;border-radius:4px;padding:16px}
+.gate h4{font-size:14px;margin-bottom:4px}
+.track{border-top:1px solid var(--line);margin-top:14px;padding-top:12px}
+.track label{display:flex;gap:8px;align-items:flex-start;text-transform:none;letter-spacing:0;font-size:13px;color:var(--text)}
+.track input{width:auto;margin-top:3px}
+.track .why{font-size:11px;color:var(--muted);margin:4px 0 0 22px}
+.approve{width:100%;margin-top:16px;padding:12px;border:0;border-radius:3px;background:var(--ink);color:var(--paper);letter-spacing:.03em}
+.approve:disabled{background:var(--paper-2);color:var(--muted);border:1px solid var(--line);cursor:not-allowed}
+.blockmsg{font-size:12px;margin-top:9px;color:var(--bad)}
+.rates{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
+.rates td{padding:4px 0;border-bottom:1px solid var(--paper-2)}
+.rates td:last-child{text-align:right;font-family:var(--mono)}
+.note{font-size:11px;color:var(--muted);margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+.err{background:#fcf1f1;border:1px solid #e5bebe;color:var(--bad);padding:12px;border-radius:3px;margin-top:16px;font-size:13px}
+@media(max-width:1100px){.ws,.rev{grid-template-columns:1fr}.ws-nav,.ws-ev{border:0;border-top:1px solid var(--line)}.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand"><b>Vertex</b> Proposal Intelligence <span>VCG</span></div>
+  <div class="spacer"></div>
+  <div class="chip" id="modelChip">model: idle</div>
+  <div class="chip">verification: deterministic</div>
+</header>
+
+<nav>
+  <button id="t0" aria-selected="true"><span class="n">01</span>Opportunity</button>
+  <button id="t1" aria-selected="false" disabled><span class="n">02</span>Workspace</button>
+  <button id="t2" aria-selected="false" disabled><span class="n">03</span>Review</button>
+</nav>
+
+<main>
+  <!-- ============ 1. OPPORTUNITY ============ -->
+  <section class="panel on" id="p0">
+    <div class="intake">
+      <h1 class="lede">Turn VCG's past work into an evidence-grounded draft.</h1>
+      <p class="sub">Structured intake, not a prompt box. Source eligibility is applied before the model sees any content, and every material claim is checked against its cited source after drafting.</p>
+
+      <div class="grid2">
+        <div class="field"><label for="sector">Sector / practice</label>
+          <select id="sector"></select></div>
+        <div class="field"><label for="client">Client</label>
+          <input id="client" value="Meridian Industrial"></div>
+      </div>
+      <div class="grid2">
+        <div class="field"><label for="deal">Deal type</label>
+          <select id="deal"><option>Competitive RFP</option><option>Sole-source proposal</option><option>Framework mini-competition</option><option>Proactive pitch</option></select></div>
+        <div class="field"><label for="due">Response due</label>
+          <input id="due" value="Thursday, 5 working days"></div>
+      </div>
+      <div class="field"><label for="rfp">RFP brief &mdash; edit this, or paste your own</label>
+        <textarea id="rfp"></textarea></div>
+
+      <button class="run" id="runBtn">Generate evidence-grounded draft</button>
+      <p class="hint">Retrieval and verification run in your browser. Only eligible source extracts are sent to the model.</p>
+      <div id="err"></div>
+      <div id="ledger"></div>
+    </div>
+  </section>
+
+  <!-- ============ 2. WORKSPACE ============ -->
+  <section class="panel" id="p1">
+    <div class="ws">
+      <div class="ws-nav"><div class="ws-hd">Sections</div><div id="secNav"></div></div>
+      <div><div class="doc" id="doc"></div></div>
+      <div class="ws-ev"><div class="ws-hd">Evidence</div><div id="ev"><p class="empty">Select any claim in the draft to see the source it came from, and why it was matched.</p></div></div>
+    </div>
+  </section>
+
+  <!-- ============ 3. REVIEW ============ -->
+  <section class="panel" id="p2">
+    <div class="rev">
+      <div class="q">
+        <h4>Exception queue <span class="chip" style="border-color:var(--line);color:var(--muted)" id="qcount"></span></h4>
+        <div id="queue"></div>
+      </div>
+      <div>
+        <div class="gate">
+          <h4>Release gate</h4>
+          <p class="sub" style="margin:4px 0 0;font-size:12px">Two independent tracks. Both must be signed before anything reaches the client.</p>
+          <div class="track">
+            <label><input type="checkbox" id="sign1" disabled> Proposal content approved</label>
+            <p class="why" id="why1"></p>
+          </div>
+          <div class="track">
+            <label><input type="checkbox" id="sign2"> Commercial terms approved</label>
+            <p class="why">Fees are retrieved from the approved FY26 rate card. The model never generates pricing.</p>
+            <table class="rates" id="rates"></table>
+          </div>
+          <button class="approve" id="approveBtn" disabled>Release to client</button>
+          <p class="blockmsg" id="blockmsg"></p>
+          <p class="note">Judgment-type statements are evaluative language, not defects. They are never treated as blocking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>

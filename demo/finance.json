@@ -1,0 +1,136 @@
+{
+ "sections": [
+  {
+   "heading": "Our Understanding",
+   "claims": [
+    {
+     "text": "Ashcombe Foods seeks support to transform its finance function following three acquisitions.",
+     "sourceIds": [],
+     "type": "brief"
+    },
+    {
+     "text": "The transformation aims to shorten the month‑end close cycle and standardise reporting across legal entities.",
+     "sourceIds": [],
+     "type": "brief"
+    },
+    {
+     "text": "It also aims to release working capital through revised payment terms and an updated inventory policy.",
+     "sourceIds": [],
+     "type": "brief"
+    },
+    {
+     "text": "Finally, a controls‑first close calendar will be designed and the finance team retrained on the new processes.",
+     "sourceIds": [],
+     "type": "brief"
+    }
+   ]
+  },
+  {
+   "heading": "Proposed Approach",
+   "claims": [
+    {
+     "text": "VCG follows a four‑phase delivery methodology: Diagnose, Design, Deliver, and Sustain.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "A joint steering committee governs every engagement and meets fortnightly.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "For engagements longer than six months, VCG assigns a dedicated Engagement Quality Director independent of the delivery team.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "Knowledge‑transfer workshops are conducted in the final four weeks of each engagement to embed new processes.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    }
+   ]
+  },
+  {
+   "heading": "Relevant Experience",
+   "claims": [
+    {
+     "text": "In an eight‑month engagement for Calder Foods, VCG reduced the month‑end close from 12 days to 6 days and standardised 41 reporting templates across three legal entities.",
+     "sourceIds": [
+      "P-2024-052"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "The Calder Foods project also introduced a controls‑first close calendar and retrained 55 finance staff on the new process.",
+     "sourceIds": [
+      "P-2024-052"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "VCG released 180 Cr of working capital for Voss Retail over 12 months by resetting DPO and DSO and redesigning inventory policy across six categories.",
+     "sourceIds": [
+      "CS-007"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "The Voss Retail engagement renegotiated payment terms with 140 suppliers to achieve the working‑capital release.",
+     "sourceIds": [
+      "CS-007"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "VCG has delivered 340 engagements since 2020 with a client repeat‑engagement rate of 68 percent, demonstrating strong client satisfaction.",
+     "sourceIds": [
+      "C-001"
+     ],
+     "type": "fact"
+    }
+   ]
+  },
+  {
+   "heading": "Why VCG",
+   "claims": [
+    {
+     "text": "VCG’s proven four‑phase methodology and rigorous governance structure position us to meet Ashcombe Foods’ objectives efficiently.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "judgment"
+    },
+    {
+     "text": "Our track record of halving month‑end close times and standardising reporting, as shown at Calder Foods, directly aligns with the desired outcomes.",
+     "sourceIds": [
+      "P-2024-052"
+     ],
+     "type": "judgment"
+    },
+    {
+     "text": "The ability to release large volumes of working capital, evidenced by the 180 Cr release for Voss Retail, demonstrates our capability to optimise cash flow for Ashcombe Foods.",
+     "sourceIds": [
+      "CS-007"
+     ],
+     "type": "judgment"
+    },
+    {
+     "text": "With a 68 percent repeat‑engagement rate and an average team size of seven consultants, VCG combines experience and dedicated resources to ensure successful delivery.",
+     "sourceIds": [
+      "C-001"
+     ],
+     "type": "judgment"
+    }
+   ]
+  }
+ ],
+ "model": "openai/gpt-oss-120b (Groq)"
+}

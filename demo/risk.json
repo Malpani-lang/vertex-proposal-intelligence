@@ -1,0 +1,137 @@
+{
+ "sections": [
+  {
+   "heading": "Our Understanding",
+   "claims": [
+    {
+     "text": "Fenwick Mutual is a regulated financial institution seeking support to rebuild its enterprise risk framework ahead of a supervisory review.",
+     "sourceIds": [],
+     "type": "brief"
+    },
+    {
+     "text": "The scope includes designing a three‑lines‑of‑defence operating model, rationalising the control library without loss of coverage, and closing outstanding regulatory findings within two review cycles.",
+     "sourceIds": [],
+     "type": "brief"
+    },
+    {
+     "text": "Respondents must evidence comparable regulatory remediation work and describe how quality will be independently assured.",
+     "sourceIds": [],
+     "type": "brief"
+    }
+   ]
+  },
+  {
+   "heading": "Proposed Approach",
+   "claims": [
+    {
+     "text": "VCG will apply its four‑phase delivery methodology—Diagnose, Design, Deliver, Sustain—to structure the risk framework rebuild.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "A joint steering committee will be established and will meet fortnightly to govern the engagement.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "For engagements longer than six months, VCG assigns a dedicated Engagement Quality Director who operates independently of the delivery team to assure quality.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "Knowledge‑transfer workshops will be conducted in the final four weeks to embed the new operating model within Fenwick Mutual’s teams.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    }
+   ]
+  },
+  {
+   "heading": "Relevant Experience",
+   "claims": [
+    {
+     "text": "VCG built a three‑lines‑of‑defence operating model for Northbank Financial, rationalising 62 controls to 38 without loss of coverage.",
+     "sourceIds": [
+      "P-2023-088"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "The Northbank engagement closed all outstanding regulatory findings within two review cycles.",
+     "sourceIds": [
+      "P-2023-088"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "The Northbank project was delivered over seven months by a five‑person team.",
+     "sourceIds": [
+      "P-2023-088"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "VCG redesigned Larkfield Group’s operating model across five business units, removing three management layers and reducing decision‑cycle time by 31 percent.",
+     "sourceIds": [
+      "P-2024-031"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "VCG’s firm credentials include 2,000 consultants across six practices, operating in 12 markets, with an average engagement team size of seven consultants.",
+     "sourceIds": [
+      "C-001"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "Since 2020 VCG has delivered 340 engagements and achieved a client repeat‑engagement rate of 68 percent.",
+     "sourceIds": [
+      "C-001"
+     ],
+     "type": "fact"
+    }
+   ]
+  },
+  {
+   "heading": "Why VCG",
+   "claims": [
+    {
+     "text": "VCG’s risk advisory practice combines deep regulatory expertise with proven operating‑model redesign experience, as demonstrated in the Northbank and Larkfield projects.",
+     "sourceIds": [
+      "P-2023-088",
+      "P-2024-031"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "The firm’s structured methodology and independent quality oversight ensure that remediation work meets supervisory expectations.",
+     "sourceIds": [
+      "C-002"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "VCG’s track record of closing regulatory findings within two review cycles aligns directly with Fenwick Mutual’s timeline requirements.",
+     "sourceIds": [
+      "P-2023-088"
+     ],
+     "type": "fact"
+    },
+    {
+     "text": "We are well placed to deliver Fenwick Mutual’s enterprise risk framework rebuild on schedule and with independent quality assurance.",
+     "sourceIds": [],
+     "type": "judgment"
+    }
+   ]
+  }
+ ],
+ "model": "openai/gpt-oss-120b (Groq)"
+}
