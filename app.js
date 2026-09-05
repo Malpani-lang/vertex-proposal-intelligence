@@ -92,7 +92,7 @@ function renderWorkspace() {
   const { sections } = state.verified;
   $('secNav').innerHTML = sections.map((s, i) => {
     const bad = s.claims.filter((c) => BLOCKING.includes(c.status)).length;
-    return `<div class="secitem ${i === state.section ? 'cur' : ''}" data-sec="${i}">${s.heading}<span class="glyphs">${bad ? '&#9679;'.repeat(Math.min(bad, 3)) : '&#9675;'}</span></div>`;
+    return `<div class="secitem ${i === state.section ? 'cur' : ''}" data-sec="${i}">${s.heading}<span class="glyphs ${bad ? 'bad' : ''}">${bad ? '&#9679;'.repeat(Math.min(bad, 3)) : '&#9675;'}</span></div>`;
   }).join('');
   $('secNav').querySelectorAll('[data-sec]').forEach((el) => (el.onclick = () => { state.section = +el.dataset.sec; renderWorkspace(); }));
 
