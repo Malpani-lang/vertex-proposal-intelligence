@@ -3,6 +3,10 @@ import { SECTORS } from './sectors.js';
 
 const $ = (id) => document.getElementById(id);
 
+// The model emits em, en and non-breaking hyphens; house style is a plain "-". Normalising
+// here also covers the cached demo runs without regenerating them.
+const dash = (s) => String(s == null ? '' : s).replace(/[\u2010-\u2015\u2212]/g, '-');
+
 let CORPUS = [];
 let state = { retrieval: null, verified: null, section: 0, claim: null, resolved: new Set() };
 
@@ -24,6 +28,9 @@ const show = (i) => {
   tabs.forEach((t, j) => t.setAttribute('aria-selected', i === j));
   [0, 1, 2].forEach((j) => $('p' + j).classList.toggle('on', i === j));
   if (i === 2) renderReview();
+  // Each panel starts at its own top - otherwise the workspace opens part-way
+  // down the draft, at whatever scroll position the Generate button left behind.
+  window.scrollTo({ top: 0 });
 };
 tabs.forEach((t, i) => (t.onclick = () => !t.disabled && show(i)));
 
@@ -81,7 +88,7 @@ function renderLedger(r) {
       <div class="fstep"><b>${r.eligible.length}</b><span>eligible</span></div>
       <div class="fstep"><b>${r.used.length}</b><span>used</span></div>
     </div>
-    <div class="excl">${r.excluded.map((e) => `<div><code>${e.id}</code> ${e.title} &mdash; ${e.reason}</div>`).join('') || '<div>No sources excluded.</div>'}</div>
+    <div class="excl">${r.excluded.map((e) => `<div><code>${e.id}</code> ${e.title} - ${e.reason}</div>`).join('') || '<div>No sources excluded.</div>'}</div>
   </div>`;
 }
 
@@ -92,7 +99,7 @@ function renderWorkspace() {
   const { sections } = state.verified;
   $('secNav').innerHTML = sections.map((s, i) => {
     const bad = s.claims.filter((c) => BLOCKING.includes(c.status)).length;
-    return `<div class="secitem ${i === state.section ? 'cur' : ''}" data-sec="${i}">${s.heading}<span class="glyphs ${bad ? 'bad' : ''}">${bad ? '&#9679;'.repeat(Math.min(bad, 3)) : '&#9675;'}</span></div>`;
+    return `<div class="secitem ${i === state.section ? 'cur' : ''}" data-sec="${i}">${dash(s.heading)}<span class="glyphs ${bad ? 'bad' : ''}">${bad ? '&#9679;'.repeat(Math.min(bad, 3)) : '&#9675;'}</span></div>`;
   }).join('');
   $('secNav').querySelectorAll('[data-sec]').forEach((el) => (el.onclick = () => {
     state.section = +el.dataset.sec;
@@ -101,13 +108,13 @@ function renderWorkspace() {
     $('sec' + state.section)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }));
 
-  $('doc').innerHTML = `<h2>${$('client').value} &mdash; Proposal</h2>
+  $('doc').innerHTML = `<h2>${$('client').value} - Proposal</h2>
     <div class="meta">${SECTORS[sel.value].label} &middot; ${$('deal').value} &middot; due ${$('due').value} &middot; draft, not sent</div>` +
-    sections.map((s, si) => `<h3 id="sec${si}">${s.heading}</h3><p>` + s.claims.map((c, ci) => {
+    sections.map((s, si) => `<h3 id="sec${si}">${dash(s.heading)}</h3><p>` + s.claims.map((c, ci) => {
       const flag = BLOCKING.includes(c.status) && !state.resolved.has(si + ':' + ci);
       const key = si + ':' + ci;
-      const src = (c.sourceIds || []).join(' ') || (c.status === STATUS.BRIEF || c.status === STATUS.JUDGMENT ? '&mdash;' : 'no source');
-      return `<span class="claim ${flag ? 'flag ' + cls(c.status) : ''} ${state.claim === key ? 'cur' : ''}" data-k="${key}">${c.text}<span class="cite ${cls(c.status)}">${src} &middot; ${shortStatus[c.status]}</span></span> `;
+      const src = (c.sourceIds || []).join(' ') || (c.status === STATUS.BRIEF || c.status === STATUS.JUDGMENT ? '-' : 'no source');
+      return `<span class="claim ${flag ? 'flag ' + cls(c.status) : ''} ${state.claim === key ? 'cur' : ''}" data-k="${key}">${dash(c.text)}<span class="cite ${cls(c.status)}">${src} &middot; ${shortStatus[c.status]}</span></span> `;
     }).join('') + '</p>').join('');
 
   $('doc').querySelectorAll('[data-k]').forEach((el) => (el.onclick = () => { state.claim = el.dataset.k; renderWorkspace(); renderEvidence(); }));
@@ -121,7 +128,7 @@ function renderEvidence() {
   const c = claimAt(state.claim);
   $('ev').innerHTML =
     `<div class="cite ${cls(c.status)}" style="display:inline-block;margin-bottom:9px">${shortStatus[c.status]}</div>
-     <p class="reason">${c.reason}</p>` +
+     <p class="reason">${dash(c.reason)}</p>` +
     (c.evidence.length
       ? c.evidence.map((e) => {
           // "From Brief" evidence points at the client's RFP, which is not a corpus source.
@@ -129,9 +136,9 @@ function renderEvidence() {
           const meta = s
             ? `${e.sourceId} &middot; ${s.client} &middot; ${s.date} &middot; authority ${s.authority}`
             : `${e.sourceId} &middot; supplied by the client &middot; not a VCG source`;
-          return `<div class="evcard"><div class="t">${e.title}</div>
+          return `<div class="evcard"><div class="t">${dash(e.title)}</div>
             <div class="m">${meta}</div>
-            <blockquote>${e.excerpt}</blockquote></div>`;
+            <blockquote>${dash(e.excerpt)}</blockquote></div>`;
         }).join('')
       : `<p class="empty">${BLOCKING.includes(c.status)
           ? 'No eligible source supports this claim. It must be removed, rewritten, or backed by a source before release.'
@@ -149,9 +156,9 @@ function renderReview() {
     const done = state.resolved.has(i.key);
     return `<div class="item ${done ? 'done' : ''}">
       <div class="cite ${cls(i.c.status)}" style="display:inline-block">${shortStatus[i.c.status]}</div>
-      <span style="font-size:11px;color:var(--muted);margin-left:8px">${i.section}</span>
-      <p>${i.c.text}</p>
-      <div class="reason" style="margin:0 0 9px">${i.c.reason}</div>
+      <span style="font-size:11px;color:var(--muted);margin-left:8px">${dash(i.section)}</span>
+      <p>${dash(i.c.text)}</p>
+      <div class="reason" style="margin:0 0 9px">${dash(i.c.reason)}</div>
       <div class="acts">${done
         ? '<button data-undo="' + i.key + '">Reopen</button>'
         : '<button data-fix="' + i.key + '">Remove claim</button><button data-fix="' + i.key + '">Accept with human sign-off</button>'}</div>

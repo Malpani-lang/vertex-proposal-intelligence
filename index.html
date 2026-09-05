@@ -200,7 +200,7 @@ textarea{min-height:210px;resize:vertical;font-size:13.5px;line-height:1.75}
         <div class="field"><label for="due">Response due</label>
           <input id="due" value="Thursday, 5 working days"></div>
       </div>
-      <div class="field"><label for="rfp">RFP brief &mdash; edit this, or paste your own</label>
+      <div class="field"><label for="rfp">RFP brief - edit this, or paste your own</label>
         <textarea id="rfp"></textarea></div>
 
       <button class="run" id="runBtn">Generate evidence-grounded draft</button>
@@ -214,7 +214,7 @@ textarea{min-height:210px;resize:vertical;font-size:13.5px;line-height:1.75}
         <ol class="steps">
           <li class="step"><span class="snum">01</span><div><b>Retrieve<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18l-7 8v7l-4 2v-9z"/></svg></b><p>Restricted and internal sources are filtered out before the prompt is built. The model never sees them.</p></div></li>
           <li class="step"><span class="snum">02</span><div><b>Draft<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l4 4v16H6z"/><path d="M15 2v4h4"/><path d="M9 12h7M9 16h5"/></svg></b><p>The model writes claim by claim, citing source IDs as it goes. It never sets pricing.</p></div></li>
-          <li class="step"><span class="snum">03</span><div><b>Verify<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 8.6-8 11-4.6-2.4-8-6-8-11V5z"/><path d="M9 11.5l2.2 2.2L15.5 9"/></svg></b><p>A deterministic rule engine &mdash; not a model &mdash; grades every claim against its cited source.</p></div></li>
+          <li class="step"><span class="snum">03</span><div><b>Verify<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 8.6-8 11-4.6-2.4-8-6-8-11V5z"/><path d="M9 11.5l2.2 2.2L15.5 9"/></svg></b><p>A deterministic rule engine - not a model - grades every claim against its cited source.</p></div></li>
           <li class="step"><span class="snum">04</span><div><b>Release<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></b><p>Unresolved exceptions block sign-off. Two independent tracks, both signed by a human.</p></div></li>
         </ol>
         <div class="railfoot"><b>Built for accuracy and accountability</b><p>From eligible sources to a signed, evidence-grounded draft.</p></div>
