@@ -94,11 +94,16 @@ function renderWorkspace() {
     const bad = s.claims.filter((c) => BLOCKING.includes(c.status)).length;
     return `<div class="secitem ${i === state.section ? 'cur' : ''}" data-sec="${i}">${s.heading}<span class="glyphs ${bad ? 'bad' : ''}">${bad ? '&#9679;'.repeat(Math.min(bad, 3)) : '&#9675;'}</span></div>`;
   }).join('');
-  $('secNav').querySelectorAll('[data-sec]').forEach((el) => (el.onclick = () => { state.section = +el.dataset.sec; renderWorkspace(); }));
+  $('secNav').querySelectorAll('[data-sec]').forEach((el) => (el.onclick = () => {
+    state.section = +el.dataset.sec;
+    renderWorkspace();
+    // The draft is one continuous document, so selecting a section means scrolling to it.
+    $('sec' + state.section)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }));
 
   $('doc').innerHTML = `<h2>${$('client').value} &mdash; Proposal</h2>
     <div class="meta">${SECTORS[sel.value].label} &middot; ${$('deal').value} &middot; due ${$('due').value} &middot; draft, not sent</div>` +
-    sections.map((s, si) => `<h3>${s.heading}</h3><p>` + s.claims.map((c, ci) => {
+    sections.map((s, si) => `<h3 id="sec${si}">${s.heading}</h3><p>` + s.claims.map((c, ci) => {
       const flag = BLOCKING.includes(c.status) && !state.resolved.has(si + ':' + ci);
       const key = si + ':' + ci;
       const src = (c.sourceIds || []).join(' ') || (c.status === STATUS.BRIEF || c.status === STATUS.JUDGMENT ? '&mdash;' : 'no source');
