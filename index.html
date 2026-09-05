@@ -59,11 +59,11 @@ main{max-width:1460px;margin:0 auto;padding:44px 40px 80px}
 .step:last-child{border:0;padding-bottom:0}
 .step b{display:block;font-size:12.5px;font-weight:700;letter-spacing:-.01em;margin-bottom:5px}
 .step b em{font-style:normal;color:var(--accent);font-family:var(--mono);font-size:10px;margin-right:9px}
-.step p{margin:0;font-size:12px;color:var(--muted);line-height:1.6}
+.step p{margin:0;font-size:12px;font-weight:500;color:var(--muted);line-height:1.6}
 @media(max-width:1140px){.intake{grid-template-columns:1fr;gap:36px}.rail{position:static}}
 .eyebrow{font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
 .lede{font-size:40px;font-weight:700;letter-spacing:-.035em;line-height:1.08;margin-bottom:16px}
-.sub{color:var(--muted);margin:0 0 36px;max-width:64ch;font-size:15px}
+.sub{color:var(--muted);margin:0 0 36px;max-width:62ch;font-size:15px;font-weight:600;line-height:1.65}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 label{display:block;font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:8px}
 input,select,textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:0;background:#fff;font:inherit;font-size:14px;color:var(--ink);transition:border-color .15s}
@@ -73,7 +73,7 @@ textarea{min-height:210px;resize:vertical;font-size:13.5px;line-height:1.75}
 .run{margin-top:6px;background:var(--ink);color:#fff;border:1px solid var(--ink);padding:17px 40px;font-size:14px;font-weight:600;letter-spacing:.01em;transition:background .16s,border-color .16s}
 .run:hover:not(:disabled){background:var(--accent);border-color:var(--accent)}
 .run:disabled{opacity:.4;cursor:progress}
-.hint{font-size:12.5px;color:var(--muted-2);margin-top:14px}
+.hint{font-size:12.5px;font-weight:500;color:var(--muted-2);margin-top:14px}
 
 /* ---------- retrieval ledger ---------- */
 .ledger{margin-top:40px;border-top:2px solid var(--ink)}
@@ -85,17 +85,19 @@ textarea{min-height:210px;resize:vertical;font-size:13.5px;line-height:1.75}
 .fstep:last-child b{color:var(--accent)}
 .fstep span{display:block;font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-top:10px}
 .excl{border-top:1px solid var(--line);padding:16px 0 0;font-size:12.5px}
-.excl div{padding:6px 0;color:var(--muted);border-bottom:1px solid var(--paper-3)}
+.excl div{padding:6px 0;font-weight:500;color:var(--muted);border-bottom:1px solid var(--paper-3)}
 .excl div:last-child{border:0}
 .excl code{font-family:var(--mono);color:var(--ink);font-size:11px;font-weight:500;margin-right:6px}
 
 /* ---------- workspace ---------- */
 .ws{display:grid;grid-template-columns:236px 1fr 360px;background:#fff;border:1px solid var(--line);min-height:600px}
 .ws>div{padding:26px}
+.ws-sticky{position:sticky;top:22px}
 .ws-nav{background:var(--paper-2);border-right:1px solid var(--line)}
 .ws-ev{border-left:1px solid var(--line);background:var(--paper-2)}
+.ws-sticky{max-height:calc(100vh - 44px);overflow-y:auto;scrollbar-width:thin}
 .ws-hd{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin-bottom:18px}
-.secitem{padding:11px 12px;cursor:pointer;font-size:13.5px;display:flex;align-items:center;gap:8px;border-left:2px solid transparent;transition:background .12s}
+.secitem{padding:11px 12px;cursor:pointer;font-size:13.5px;font-weight:500;display:flex;align-items:center;gap:8px;border-left:2px solid transparent;transition:background .12s}
 .secitem:hover{background:#fff}
 .secitem.cur{background:#fff;border-left-color:var(--accent);font-weight:600}
 .glyphs{margin-left:auto;font-size:9px;color:var(--line-2);letter-spacing:2px}
@@ -105,7 +107,7 @@ textarea{min-height:210px;resize:vertical;font-size:13.5px;line-height:1.75}
 .doc h2{font-size:26px;letter-spacing:-.03em;margin-bottom:6px}
 .doc .meta{font-family:var(--mono);font-size:11px;color:var(--muted-2);margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--line)}
 .doc h3{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.16em;color:var(--accent);margin:34px 0 14px;scroll-margin-top:28px}
-.doc p{margin:0;font-size:15px;line-height:1.85;color:var(--ink-2)}
+.doc p{margin:0;font-size:15px;font-weight:400;line-height:1.85;color:var(--ink-2)}
 .claim{cursor:pointer;transition:background .12s}
 .claim:hover{background:var(--paper-2)}
 .claim.cur{background:var(--accent-wash);box-shadow:0 0 0 3px var(--accent-wash)}
@@ -121,9 +123,9 @@ textarea{min-height:210px;resize:vertical;font-size:13.5px;line-height:1.75}
 .evcard{background:#fff;border:1px solid var(--line);padding:16px;margin-bottom:12px}
 .evcard .t{font-size:12.5px;font-weight:600;margin-bottom:3px;letter-spacing:-.01em}
 .evcard .m{font-family:var(--mono);font-size:10px;color:var(--muted-2);margin-bottom:12px}
-.evcard blockquote{margin:0;font-size:12.5px;color:var(--ink-2);border-left:2px solid var(--accent);padding-left:12px;font-family:var(--mono);line-height:1.65}
-.reason{font-size:12.5px;color:var(--muted);margin:10px 0 18px;line-height:1.6}
-.empty{color:var(--muted-2);font-size:12.5px;line-height:1.7}
+.evcard blockquote{margin:0;font-size:12.5px;font-weight:500;color:var(--ink-2);border-left:2px solid var(--accent);padding-left:12px;font-family:var(--mono);line-height:1.65}
+.reason{font-size:12.5px;font-weight:500;color:var(--muted);margin:10px 0 18px;line-height:1.6}
+.empty{color:var(--muted-2);font-size:12.5px;font-weight:500;line-height:1.7}
 
 /* ---------- review ---------- */
 .rev{display:grid;grid-template-columns:1fr 348px;gap:26px;align-items:start}
@@ -133,7 +135,7 @@ textarea{min-height:210px;resize:vertical;font-size:13.5px;line-height:1.75}
 .item{padding:20px 22px;border-bottom:1px solid var(--line)}
 .item:last-child{border:0}
 .item.done{opacity:.42}
-.item p{margin:10px 0 8px;font-size:14.5px;line-height:1.65}
+.item p{margin:10px 0 8px;font-size:14.5px;font-weight:500;line-height:1.65}
 .acts{display:flex;gap:10px;margin-top:14px}
 .acts button{font-size:12.5px;font-weight:500;padding:9px 18px;border:1px solid var(--line-2);background:#fff;color:var(--ink);transition:border-color .15s,color .15s}
 .acts button:hover{border-color:var(--accent);color:var(--accent)}
@@ -142,15 +144,15 @@ textarea{min-height:210px;resize:vertical;font-size:13.5px;line-height:1.75}
 .track{border-top:1px solid var(--line);margin-top:20px;padding-top:18px}
 .track label{display:flex;gap:11px;align-items:flex-start;text-transform:none;letter-spacing:0;font-size:14px;font-weight:600;color:var(--ink);margin:0}
 .track input{width:auto;margin-top:4px;accent-color:var(--accent)}
-.track .why{font-size:12px;color:var(--muted);margin:7px 0 0 24px;line-height:1.6}
+.track .why{font-size:12px;font-weight:500;color:var(--muted);margin:7px 0 0 24px;line-height:1.6}
 .approve{width:100%;margin-top:22px;padding:16px;border:1px solid var(--ink);background:var(--ink);color:#fff;font-size:14px;font-weight:600;transition:background .16s,border-color .16s}
 .approve:hover:not(:disabled){background:var(--accent);border-color:var(--accent)}
 .approve:disabled{background:var(--paper-2);color:var(--muted-2);border-color:var(--line);cursor:not-allowed}
 .blockmsg{font-size:12px;margin-top:11px;color:var(--bad)}
 .rates{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:14px}
-.rates td{padding:7px 0;border-bottom:1px solid var(--paper-3);color:var(--muted)}
+.rates td{padding:7px 0;font-weight:500;border-bottom:1px solid var(--paper-3);color:var(--muted)}
 .rates td:last-child{text-align:right;font-family:var(--mono);color:var(--ink);font-size:11.5px}
-.note{font-size:11.5px;color:var(--muted-2);margin:16px 0 0;padding-top:16px;border-top:1px solid var(--line);line-height:1.6}
+.note{font-size:11.5px;font-weight:500;color:var(--muted-2);margin:16px 0 0;padding-top:16px;border-top:1px solid var(--line);line-height:1.6}
 .err{background:var(--bad-wash);border:1px solid #E7C6C6;color:var(--bad);padding:16px;margin-top:20px;font-size:13.5px}
 @media(max-width:1140px){.ws,.rev{grid-template-columns:1fr}.ws-nav,.ws-ev{border:0;border-top:1px solid var(--line)}.grid2{grid-template-columns:1fr}
   header,nav,main{padding-left:22px;padding-right:22px}.lede{font-size:30px}.fstep{padding-right:32px;margin-right:32px}}
@@ -214,9 +216,9 @@ textarea{min-height:210px;resize:vertical;font-size:13.5px;line-height:1.75}
   <!-- ============ 2. WORKSPACE ============ -->
   <section class="panel" id="p1">
     <div class="ws">
-      <div class="ws-nav"><div class="ws-hd">Sections</div><div id="secNav"></div></div>
+      <div class="ws-nav"><div class="ws-sticky"><div class="ws-hd">Sections</div><div id="secNav"></div></div></div>
       <div><div class="doc" id="doc"></div></div>
-      <div class="ws-ev"><div class="ws-hd">Evidence</div><div id="ev"><p class="empty">Select any claim in the draft to see the source it came from, and why it was matched.</p></div></div>
+      <div class="ws-ev"><div class="ws-sticky"><div class="ws-hd">Evidence</div><div id="ev"><p class="empty">Select any claim in the draft to see the source it came from, and why it was matched.</p></div></div></div>
     </div>
   </section>
 

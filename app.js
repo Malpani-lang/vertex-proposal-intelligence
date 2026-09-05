@@ -124,12 +124,18 @@ function renderEvidence() {
      <p class="reason">${c.reason}</p>` +
     (c.evidence.length
       ? c.evidence.map((e) => {
+          // "From Brief" evidence points at the client's RFP, which is not a corpus source.
           const s = CORPUS.find((x) => x.id === e.sourceId);
+          const meta = s
+            ? `${e.sourceId} &middot; ${s.client} &middot; ${s.date} &middot; authority ${s.authority}`
+            : `${e.sourceId} &middot; supplied by the client &middot; not a VCG source`;
           return `<div class="evcard"><div class="t">${e.title}</div>
-            <div class="m">${e.sourceId} &middot; ${s.client} &middot; ${s.date} &middot; authority ${s.authority}</div>
+            <div class="m">${meta}</div>
             <blockquote>${e.excerpt}</blockquote></div>`;
         }).join('')
-      : '<p class="empty">No eligible source supports this claim. It must be removed, rewritten, or backed by a source before release.</p>');
+      : `<p class="empty">${BLOCKING.includes(c.status)
+          ? 'No eligible source supports this claim. It must be removed, rewritten, or backed by a source before release.'
+          : 'Nothing to verify against a source. This statement is not treated as a defect and does not block release.'}</p>`);
 }
 
 function renderReview() {
